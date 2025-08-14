@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <textarea class="js-copytextarea" style="width:100%;" rows="5">This is the text that will be selected. Note that you can hide this and implement a secret copy feature.</textarea>
+    <p> You can hide this textare in your document and change the text of the textarea and copy it when you want.
+    </p>
+    
+    <p>
+      <button class="js-textareacopybtn">Copy Textarea text</button>
+    </p>
+    
+</body>
+<script>
+    var copyTextareaBtn = document.querySelector('.js-textareacopybtn');
+
+    copyTextareaBtn.addEventListener('click', function(event) {
+    var copyTextarea = document.querySelector('.js-copytextarea');
+    copyTextarea.select();
+
+    try {
+        var successful = document.execCommand('copy');
+        var msg = successful ? 'successful' : 'unsuccessful';
+        console.log('Copying text command was ' + msg);
+    } catch (err) {
+        console.log('Oops, unable to copy');
+    }
+    });
+</script>
+</html>

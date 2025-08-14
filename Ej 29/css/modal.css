@@ -1,0 +1,37 @@
+.modal{
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  overflow: auto;
+  background-color: #ffffffd0;
+  align-items: center;
+  justify-content: center;
+}
+.modal-contenedor {
+  background-color: #faba16;
+  
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  height: 80%;
+  overflow: auto;
+}
+.close{
+  color: #000;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover, .close:focus{
+  color: rgb(230, 2, 2);
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.botones input{
+  padding: 5px 15px;
+}

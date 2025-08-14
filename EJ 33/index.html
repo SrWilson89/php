@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/ico9.jpg" type="image/x-icon">
+</head>
+<body>
+
+    <nav>
+        <th>
+            <td><a href="#seccion1">Seccion 1</a></td>
+            <td><a href="#seccion2">Seccion 2</a></td>
+            <td><a href="#seccion3">Seccion 3</a></td>
+        </th>
+    </nav>
+
+    <section id="seccion1">
+        <header tabindex="0"><h2>Seccion 1</h2></header>
+        <p tabindex="0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quo, eos harum voluptate ullam vero itaque molestiae, consequatur amet ipsam corporis, fugit recusandae. Provident magnam numquam magni, repellat repellendus veritatis?</p>
+        <div class="fotos">
+            <img src="img/001.jpg" alt="foto de naranjas" tabindex="0">
+            <img src="img/002.jpg" alt="Foto de limones" tabindex="0">
+        </div>
+    </section>
+
+    <section id="seccion2">
+        <header tabindex="0"><h2>Seccion 2</h2></header>
+        <p tabindex="0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quo, eos harum voluptate ullam vero itaque molestiae, consequatur amet ipsam corporis, fugit recusandae. Provident magnam numquam magni, repellat repellendus veritatis?</p>
+        <div class="fotos">
+            <img src="img/001.jpg" alt="foto de naranjas" tabindex="0">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/d8vYWFdtuCU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section id="seccion3">
+        <header tabindex="0"><h2>Seccion 3</h2></header>
+        <div class="contenedor">
+            <form action="" method="get">
+                <label for="" tabindex="0" >Correo Electronico: <input type="email" name="" id="email" placeholder="email@gmail.com"></label>
+                <label for="" tabindex="0">Nombre y Apellidos <input type="text" name="" id="nombreapellido" placeholder="Juan Descanso Martin"></label>
+                <label for="" tabindex="0" >Asunto <input type="text" name="" id="asunto" placeholder="Informacion cursos"></label>
+                <textarea name="" id="texto" cols="60" rows="10"></textarea>
+                <button onclick="enviar()">Enviar</button>
+                
+            </form>
+            <div class="descripcion">
+                <p tabindex="0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam eligendi esse quam quia dolorem voluptatem pariatur! Nostrum dolorum laborum aliquam dignissimos non, vero, cum nesciunt fugit iure sunt, aut placeat.</p>
+            </div>
+        </div>
+    </section>
+    
+</body>
+<script src="js/motor.js"></script>
+</html>

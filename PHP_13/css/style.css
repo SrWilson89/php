@@ -1,0 +1,36 @@
+body{
+    height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    background-color: #40739e;
+}
+
+form{
+    width: fit-content;
+    height: fit-content;
+    background-color: lightskyblue;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    flex-direction: column;
+}
+
+.form-error{
+    color: #c23616;
+    font-weight: bolder;
+    text-shadow: whitesmoke 2px 2px 2px;
+}
+
+.btn{
+    width: 100%;
+    background-color: black;
+    color: whitesmoke;
+    text-align: center;
+}
+
+label{
+    font-weight: bolder;
+}

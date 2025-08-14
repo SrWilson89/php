@@ -1,0 +1,32 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.pack{
+    width: 100%;
+    padding: 10px;
+    min-height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    font-size: 2em;
+    padding: 5px 15px;
+}
+
+.boto{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#enlaces{
+    display:none;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    *{
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cajon{
+    height: 80vh;
+    width: 320px;
+    background-color: #c8d6e5;
+    border-radius: 25px;
+    overflow: auto;
+    
+}
+
+.cabeza{
+    width: 100%;
+    height: 10vh;
+    background-color: rgba(170, 186, 255, 0.904);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cabeza i{
+    margin-left:10px;
+    font-size: 1.4em;
+}
+
+.fa-plus:hover{
+    color: greenyellow;
+    text-shadow: 2px 2px 2px black;
+    cursor: pointer;
+}
+
+.fa-eraser:hover{
+    color: rgb(184, 0, 0);
+    text-shadow: 2px 2px 2px black;
+    cursor: pointer;
+}
+
+.cabeza input{
+    font-size: 1.2em;
+    padding: 0px;
+    width: 50%;
+}
+
+#cuerpo{
+    width: 100%;
+    height: 60vh;
+    overflow-y: hidden;
+    background-color: rgba(255, 255, 255, 0.300);
+    display: table;
+    justify-content: center;
+    align-items: flex-start ; 
+    flex-wrap: wrap;
+}
+
+#cuerpo2{
+    width: 100%;
+    height: 60vh;
+    overflow-y: hidden;
+    background-color: rgb(170, 252, 93);
+    display: table;
+    justify-content: center;
+    align-items: flex-start ; 
+    flex-wrap: wrap;
+}
+
+.datos{
+    margin-top: 10px;
+    margin-left: 2em;
+    width: 75%;
+    height: 2em;
+    padding: 5px 15px;
+    background-color: ivory;
+    border-radius: 10px;
+    position: relative;
+    flex-wrap: wrap;    
+}
+
+.cerrar{
+    position: absolute;
+    top: -10px;
+    font-size: 1.4em;
+    left: -1.2em;
+    padding: 5px 0px;
+    color: rgb(10, 0, 70);
+}
+
+.cerrar:hover{
+    color: #e74c3c;
+    cursor: pointer;
+}
+
+.check{
+    position: absolute;
+    top: -10px;
+    font-size: 1.4em;
+    right: 5px;
+    padding: 5px 0px;
+    color: rgb(10, 0, 70);
+}
+
+.check:hover{
+    color: #27ae60;
+    cursor: pointer;
+}
+
+#tareas{
+    width: 100%;
+    height: 5vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    padding: 5px;
+}
+
+#tareas p{
+    margin-top: 10px;
+}
+
+#completadas{
+    width: 100%;
+    height: calc(5vh);
+    background-color: #333;
+    color: oldlace;
+    border-top: 5px solid navy;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    font-weight: bolder;
+}
+
+#completadas p{
+    margin-top: 10px;
+}
+
+.fa-trash-alt{
+    margin-left: 5px;
+}
+
+</style>
+<body>
+
+    <div class="container">
+        <div class="cajon">
+            <div class="cabeza">
+                <input type="text" id="info">
+                <i class="fas fa-plus" onclick="add()"></i>
+                <i class="fas fa-eraser" onclick="limpiar()"></i>
+            </div>
+            <div id="tareas">
+
+            </div>
+            <div id="cuerpo">                
+
+            </div>
+            <div id="cuerpo2">
+
+            </div>
+            <div id="completadas">
+
+            </div>
+        </div>
+    </div>
+    
+<div style="text-align: right;position: fixed;z-index:9999999;bottom: 0;width: auto;right: 1%;cursor: pointer;line-height: 0;display:block !important;"><a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&utm_campaign=000_logo&utm_medium=website&utm_content=footer_img"><img src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png" alt="www.000webhost.com"></a></div><script>function getCookie(t){for(var e=t+"=",n=decodeURIComponent(document.cookie).split(";"),o=0;o<n.length;o++){for(var i=n[o];" "==i.charAt(0);)i=i.substring(1);if(0==i.indexOf(e))return i.substring(e.length,i.length)}return""}getCookie("hostinger")&&(document.cookie="hostinger=;expires=Thu, 01 Jan 1970 00:00:01 GMT;",location.reload());var wordpressAdminBody=document.getElementsByClassName("wp-admin")[0],notification=document.getElementsByClassName("notice notice-success is-dismissible"),hostingerLogo=document.getElementsByClassName("hlogo"),mainContent=document.getElementsByClassName("notice_content")[0];if(null!=wordpressAdminBody&&notification.length>0&&null!=mainContent){var googleFont=document.createElement("link");googleFontHref=document.createAttribute("href"),googleFontRel=document.createAttribute("rel"),googleFontHref.value="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700",googleFontRel.value="stylesheet",googleFont.setAttributeNode(googleFontHref),googleFont.setAttributeNode(googleFontRel);var css="@media only screen and (max-width: 576px) {#main_content {max-width: 320px !important;} #main_content h1 {font-size: 30px !important;} #main_content h2 {font-size: 40px !important; margin: 20px 0 !important;} #main_content p {font-size: 14px !important;} #main_content .content-wrapper {text-align: center !important;}} @media only screen and (max-width: 781px) {#main_content {margin: auto; justify-content: center; max-width: 445px;}} @media only screen and (max-width: 1325px) {.web-hosting-90-off-image-wrapper {position: absolute; max-width: 95% !important;} .notice_content {justify-content: center;} .web-hosting-90-off-image {opacity: 0.3;}} @media only screen and (min-width: 769px) {.notice_content {justify-content: space-between;} #main_content {margin-left: 5%; max-width: 445px;} .web-hosting-90-off-image-wrapper {position: absolute; display: flex; justify-content: center; width: 100%; }} .web-hosting-90-off-image {max-width: 90%;} .content-wrapper {min-height: 454px; display: flex; flex-direction: column; justify-content: center; z-index: 5} .notice_content {display: flex; align-items: center;} * {-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;} .upgrade_button_red_sale{box-shadow: 0 2px 4px 0 rgba(255, 69, 70, 0.2); max-width: 350px; border: 0; border-radius: 3px; background-color: #ff4546 !important; padding: 15px 55px !important; font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 600; color: #ffffff;} .upgrade_button_red_sale:hover{color: #ffffff !important; background: #d10303 !important;}",style=document.createElement("style"),sheet=window.document.styleSheets[0];style.styleSheet?style.styleSheet.cssText=css:style.appendChild(document.createTextNode(css)),document.getElementsByTagName("head")[0].appendChild(style),document.getElementsByTagName("head")[0].appendChild(googleFont);var button=document.getElementsByClassName("upgrade_button_red")[0],link=button.parentElement;link.setAttribute("href","https://www.hostinger.com/hosting-starter-offer?utm_source=000webhost&utm_medium=panel&utm_campaign=000-wp"),link.innerHTML='<button class="upgrade_button_red_sale">Go for it</button>',(notification=notification[0]).setAttribute("style","padding-bottom: 0; padding-top: 5px; background-color: #040713; background-size: cover; background-repeat: no-repeat; color: #ffffff; border-left-color: #040713;"),notification.className="notice notice-error is-dismissible";var mainContentHolder=document.getElementById("main_content");mainContentHolder.setAttribute("style","padding: 0;"),hostingerLogo[0].remove();var h1Tag=notification.getElementsByTagName("H1")[0];h1Tag.className="000-h1",h1Tag.innerHTML="Black Friday Prices",h1Tag.setAttribute("style",'color: white; font-family: "Roboto", sans-serif; font-size: 22px; font-weight: 700; text-transform: uppercase;');var h2Tag=document.createElement("H2");h2Tag.innerHTML="Get 90% Off!",h2Tag.setAttribute("style",'color: white; margin: 10px 0 15px 0; font-family: "Roboto", sans-serif; font-size: 60px; font-weight: 700; line-height: 1;'),h1Tag.parentNode.insertBefore(h2Tag,h1Tag.nextSibling);var paragraph=notification.getElementsByTagName("p")[0];paragraph.innerHTML="Get Web Hosting for $0.99/month + SSL Certificate for FREE!",paragraph.setAttribute("style",'font-family: "Roboto", sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 15px;');var list=notification.getElementsByTagName("UL")[0];list.remove();var org_html=mainContent.innerHTML,new_html='<div class="content-wrapper">'+mainContent.innerHTML+'</div><div class="web-hosting-90-off-image-wrapper"><img class="web-hosting-90-off-image" src="https://cdn.000webhost.com/000webhost/promotions/bf-2020-wp-inject-img.png"></div>';mainContent.innerHTML=new_html;var saleImage=mainContent.getElementsByClassName("web-hosting-90-off-image")[0]}</script></body>
+<script>
+    var tareas=[];
+var completadas=[];
+
+function add(){
+
+    texto=document.getElementById('info').value;
+    tareas.push({texto});
+
+    pintar();
+    
+};
+
+function pintar(){
+    document.getElementById('cuerpo').innerHTML="";
+    numtar=0;
+    for(x=0;x<tareas.length;x++){
+        
+        document.getElementById('cuerpo').innerHTML+=`
+        <div class="datos">
+            <p id="tc${x}">${tareas[x].texto}</p>
+            <div class="cerrar" onclick="borrar(${x})"><i class="far fa-times-circle"></i></div>
+            <div class="check" onclick="check(${x})"><i class="fas fa-check"></i></div>
+            
+        </div> 
+        `;
+    };
+
+    document.getElementById('cuerpo2').innerHTML="";
+    for(x=0;x<completadas.length;x++){
+        
+        document.getElementById('cuerpo2').innerHTML+=`
+        <div class="datos">
+            <p id="tcc${x}">${completadas[x]}</p>
+            <div class="cerrar" onclick=""><i class="far fa-times-circle"></i></div>
+        </div> 
+        `;
+    };
+
+    document.getElementById('tareas').innerHTML=`<p>${tareas.length} Tareas pendientes</p><i class="fas fa-trash-alt" onclick="borrarTodo()"></i>`;
+    document.getElementById('completadas').innerHTML=`<p onclick="mosTaCom()" style="cursor: pointer;">${completadas.length} Tareas completadas</p><i class="fas fa-trash-alt" onclick="borrarTodoTC()"></i>`;
+
+    localStorage.setItem('listaTareas',JSON.stringify(tareas));
+}
+
+
+mostrarTareasCompletas=false;
+mosTaCom();
+function mosTaCom(){
+    if(mostrarTareasCompletas==false){
+        document.getElementById('cuerpo2').style.display="none";
+        document.getElementById('cuerpo').style.display="table"
+        mostrarTareasCompletas=true;
+    }else{
+        document.getElementById('cuerpo2').style.display="table";
+        document.getElementById('cuerpo').style.display="none";
+        mostrarTareasCompletas=false;
+    }
+    pintar();
+}
+
+function cargaDatos(){
+    if (localStorage.getItem('listaTareas')){
+        tareas=JSON.parse(localStorage.getItem('listaTareas'));
+        pintar();
+    }
+    if (localStorage.getItem('tareasCompletadas')){
+        completadas=JSON.parse(localStorage.getItem('tareasCompletadas'));
+        pintar();
+    }
+}
+cargaDatos();
+
+function borrar(x){
+    tareas.splice(x,1);
+    localStorage.setItem('listaTareas',JSON.stringify(tareas));
+    pintar();
+}
+
+function limpiar(){
+    document.getElementById('info').value="";
+}
+
+function borrarTodo(){
+    tareas.splice(0,tareas.length);
+    localStorage.setItem('listaTareas',JSON.stringify(tareas));
+    pintar();
+}
+
+function borrarTodoTC(){
+    completadas.splice(0,completadas.length);
+    localStorage.setItem('tareasCompletadas',JSON.stringify(completadas));
+    pintar();
+}
+
+function check(x){
+    tarComUn=document.getElementById(`tc${x}`).value
+    completadas.push({tarComUn});
+
+    localStorage.setItem('tareasCompletadas',JSON.stringify(completadas));
+    borrar(x);
+}
+
+console.log(`
+---------------------------------------------------
+    Este codigo fue desarrolado por Sr.Wilson-89   
+    Email: srwilsom89@gmail.com                    
+---------------------------------------------------
+
+╔═══════════════════════╗
+║ ╔═╗  ╔╦╦╦╦╗           ║
+║ ║╚╬═╗║║║╠╣╠══╦═╦═╗ 8  ║
+║ ╠╗║╠╝║║║║║╠╗╚╣║║║║  9 ║
+║ ╚═╩╝ ╚══╩╩╩══╩═╩╩╝    ║
+╚═══════════════════════╝
+
+## ##   ### ##
+##   ##   ##  ##
+####      ##  ##
+ #####    ## ##
+    ###   ## ##
+##   ##   ##  ##
+ ## ##   #### ##
+
+ ##   ##    ####
+ ##   ##     ##
+ ##   ##     ##
+ ## # ##     ##
+ # ### #     ##
+  ## ##      ##
+ ##   ##    ####
+
+ ####      ## ##
+ ##      ##   ##
+ ##      ####
+ ##       #####
+ ##          ###
+ ##  ##  ##   ##
+### ###   ## ##
+
+## ##   ###  ##
+##   ##    ## ##
+##   ##   # ## #
+##   ##   ## ##
+##   ##   ##  ##
+##   ##   ##  ##
+ ## ##   ###  ##
+
+ ## ##    ## ##
+##   ##   #   ##
+##   ##  ##   ##
+ ## ##    ## ###
+##   ##       ##
+ #   ##  ##   ##
+ ## ##    ## ##
+
+`);
+</script>
+    
+</body>
+</html>

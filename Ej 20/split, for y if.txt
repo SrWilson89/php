@@ -1,0 +1,44 @@
+1
+
+Imprimir todos los dígitos decimales, del O al 9, utilizando una repetición.
+
+2
+
+Imprimir todos los números entre el 100 y el 199.
+
+3
+
+Imprimir los números entre el 5 y el 20, saltando de tres en tres.
+
+4
+
+Requerir al usuario que ingrese un número entero positivo e imprimir todos los números correlativos entre el
+ingresado por el usuario y uno menos del doble del mismo.
+
+5
+
+Escribir un programa que solicite al usuario una cantidad y luego ¡tere la cantidad de veces dada. En cada iteración,
+solicitar al usuario que ingrese un número. Al finalizar, mostrar la suma de todos los números ingresados.
+
+6
+
+Solicitar al usuario que ingrese una frase y luego imprimir un listado de las vocales que aparecen en esa frase (sin
+repetirlas).
+
+7
+
+Solicitar al usuario que ingrese una frase y luego imprimir la cantidad de vocales que se encuentran en dicha frase.
+
+8
+
+Escribir un programa que muestre la sumatoria de todos los números entre el O y el 100.
+
+9
+
+Escribir un programa que muestre la sumatoria de todos los múltiplos de 3 encontrados entre el O y el 100.
+
+10
+
+Dado un número entero positivo, mostrar su factorial. El factorial de un número se obtiene multiplicando todos los
+números enteros positivos que hay entre el 1 y ese número.
+

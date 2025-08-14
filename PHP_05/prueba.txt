@@ -1,0 +1,4 @@
+Hola mundo 
+
+Escribo mi primera línea con fputs
+Escribo mi primera línea con fwrite

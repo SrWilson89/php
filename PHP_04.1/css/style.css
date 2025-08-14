@@ -1,0 +1,28 @@
+form{
+    width: 50vw!important;
+    height: 100vh!important;
+    background-color: lightseagreen!important;
+}
+
+div{
+    margin-top: 5px;
+    padding: 5px 15px;
+    font-size: 1.6em;
+}
+
+input{
+    font-size: 1em;
+    padding: 0px 15px;
+}
+
+#color{
+    font-size: 1em;
+    padding: 0px 15px;
+}
+
+.error{
+    padding: 0;
+    font-size: 1em !important;
+    color: blue;
+}
+

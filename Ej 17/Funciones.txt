@@ -1,0 +1,49 @@
+Este ejerciocio usa funciones que llaman a otras funciones
+
+Ejemplo:
+
+function arriba(){
+    
+    for (x=0;x<valores.length;x++){
+        document.getElementById(`milistado`).innerHTML+=`
+        <div>${valores[x]}</div>
+        `
+    }
+
+    document.getElementById(`flecha`).innerHTML=`<i class="fas fa-arrow-circle-down"></i>`;
+
+}
+
+function abajo(){
+
+    for (x=valores.length-1;x>=0;x--){
+        document.getElementById(`milistado`).innerHTML+=`
+        <div>${valores[x]}</div>
+        `
+    }
+
+    document.getElementById(`flecha`).innerHTML=`<i class="fas fa-arrow-circle-up"></i>`;
+
+}
+
+function cambia(){
+
+    document.getElementById(`milistado`).innerHTML="";
+
+    if(bandera==true){
+        arriba();
+        bandera=false;
+    }else{
+        abajo();
+        bandera=true
+    }
+}
+
+Tambien usamos transiciones en CSS:
+
+i:hover{
+    color: #1E90FF;
+    transform: rotate(180deg);
+    transition: 1s all ease-in;
+}
+

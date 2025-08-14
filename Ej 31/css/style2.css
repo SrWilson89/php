@@ -1,0 +1,14 @@
+.alumnos{
+    width: 60%;
+    height: fit-content;
+    border: 1px black solid;
+    margin: 15px;
+    background-color: ivory;
+    padding: 5px 15px;
+    font-size: 21px;
+}
+
+.rojo{
+    color: red;
+    font-weight: bolder;
+}

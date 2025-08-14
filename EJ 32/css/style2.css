@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    width: calc(100vw - 0px);
+    overflow: hidden;
+}
+
+header{
+    width: 100vw;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: aqua;
+    padding: 10px 0px;
+}
+
+header img{
+    height: 100%;
+}
+
+header h1{
+    font-size: 2.5em;
+}
+
+header button{
+    font-size: 1.5em;
+    padding: 5px 15px;
+}
+
+.enlaces{
+    width: 100vw;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f1f2f6;
+}
+
+.enlaces nav a{
+    margin-right: 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.contenedor{
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    overflow: hidden;
+}
+
+.izq{
+    width: 30%;
+    height: 100%;
+    background-color: rgba(0, 0, 255, 0.445);
+    padding: 5px 15px;
+}
+
+.der{
+    width: 70%;
+    height: 100%;
+    background-color: rgba(222, 184, 135, 0.336);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow:auto;
+}
+
+.cajita{
+    width: 20vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cajita img{
+    width: 80%;
+}
+
+.cajita p{
+    width: 80%;
+}
+
+.cajita button{
+    padding: 5px 15px;
+}

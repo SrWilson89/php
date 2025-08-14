@@ -1,0 +1,45 @@
+body{
+    font-size: 2.5em;
+}
+
+button{
+    font-size: 1.5em;
+    padding: 5px 15px;
+}
+
+.atk{
+    width: 50px;
+    margin-top: 5px;
+}
+
+.win{
+    width: 50vw;
+}
+
+div{
+    text-align: center;
+}
+
+#mons{
+    width: 100%;
+    height: 40vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#mons img{
+    height: 100%;    
+}
+
+#imagen{
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-name: sBote;
+    animation-iteration-count:initial;
+  }
+  
+  @keyframes sBote{
+    0% { margin-left: 25%;}
+    50% { margin-left: -25%;}    
+    100% { margin-left: 0%;}
+  }

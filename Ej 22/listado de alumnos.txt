@@ -1,0 +1,3 @@
+Es un listado donde meter los alumnos que tenemos, el valor de la nota por defecto es 5.
+Este listado tiene persistencia y tambien tiene la posibilidad de modificar la nota de
+cada alumno, ademas de dividirla en tres colores diferentes.

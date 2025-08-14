@@ -1,0 +1,28 @@
+.lineal{
+    background-color: lightblue;
+    width: 100%;
+    height: 10vh;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.izq{
+    font-size: 2rem;
+}
+
+.der{
+    font-size: 2rem;
+}
+
+.lineal button{
+    font-size: 1.5rem;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.lineal button:hover{
+    background-color: black;
+    color: tomato;
+}

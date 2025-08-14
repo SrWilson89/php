@@ -1,0 +1,51 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.img{
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+img:hover{
+    box-shadow: blue 2px 2px 2px;
+}
+
+h1{
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+}
+
+body{
+    background-color: lightblue;
+}
+
+.portada{
+    width: 20vw;
+    height: auto;
+    margin-right: 15px;
+}
+
+.linea{
+    width: calc(100% -10px);
+    padding: 5px;
+    display: flex;
+}
+
+.enunciado{
+    font-size: 1.5em;
+}
+
+.logos{
+    margin-top: 15px;
+}
+
+.contenedor:last-of-type{
+    display: none;
+}
+

@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header, nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 10vh;
+    background-color: #c7ecee;
+}
+
+header button{
+    font-size: 2em;
+    padding: 5px 15px;
+}
+
+header input{
+    font-size: 2em;
+    padding: 5px 15px;
+}
+
+nav a{
+    font-size: 2em;
+    color: black;
+    text-shadow: whitesmoke 2px 2px 0px;
+}
+
+header img{
+    height: 100%;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background-color: #dff9fb;
+}
+
+#actulidad h2, #deportes h2, #finanzas h2, #cine h2, #tiempo h2{
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 4em;
+}
+
+.caja{
+    width: 45%;
+    height: 100%;
+}
+
+.caja img{
+    width: 100%;
+}
+
+.caja h1{
+    width: 100%;
+    font-size: 2em;
+}
+
+.caja p{
+    width: 100%;
+    font-size: 1.5em;
+}
+
+.caja tr{
+    width: 100%;
+    font-size: 1.5em;
+}
+
+.caja iframe{
+    width: 100%;
+}

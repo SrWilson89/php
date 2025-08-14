@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/ico9.jpg" type="image/x-icon">
+</head>
+<body>
+
+    <div class="container">
+        <div class="coches">
+            <div id="fotocoche">
+                <img src="img/c001a.png" alt="">
+
+            </div>
+
+            <div class="precios">
+                <p>Valor base: <span id="base">14000</span> €</p>
+                <p>Color: <span id="bcolor">200</span> €</p>
+                <p>Llantas: <span id="bllantas">100</span> €</p>
+                <p>Total: <span id="btotal">14300</span> €</p>
+            </div>
+        </div>
+        <div class="configurador">
+
+            <p>Elige el color</p>
+            <div class="contencolor">
+                <div class="cajacolor">
+                    <img src="img/Rosa.jpg" alt="" class="color" onclick="micolor(4)">
+                    <img src="img/checked.png" alt="" id="cnegro" class="icono2" style="display: none;">
+                </div>
+
+                <div class="cajacolor">
+                    <img src="img/Rojo.jpg" alt="" class="color" onclick="micolor(1)">
+                    <img src="img/checked.png" alt="" id="cblanco" class="icono2" style="display: none;">
+                </div>
+
+                <div class="cajacolor">
+                    <img src="img/Verde.jpg" alt="" class="color" onclick="micolor(0)">
+                    <img src="img/checked.png" alt="" id="cazul" class="icono2" >
+                </div>
+
+                <div class="cajacolor">
+                    <img src="img/Amarillo.jpg" alt="" class="color" onclick="micolor(5)">
+                    <img src="img/checked.png" alt="" id="crojo" class="icono2" style="display: none;">
+                </div>
+
+                <div class="cajacolor">
+                    <img src="img/Morado.jpg" alt="" class="color" onclick="micolor(3)">
+                    <img src="img/checked.png" alt="" id="cplata" class="icono2" style="display: none;">
+                </div>
+
+                <div class="cajacolor">
+                    <img src="img/Beige.jpg" alt="" class="color" onclick="micolor(2)">
+                    <img src="img/checked.png" alt="" id="cnegrom" class="icono2" style="display: none;">
+                </div>
+
+            </div>
+
+            <p>Elige la llanta</p>
+            <div class="contenllanta">
+                <div class="llantas">
+                    <img src="img/llanta02.png" alt="" class="llanta" onclick="millanta(2)">
+                    <img src="img/checked.png" alt="" id="llantablanca" class="icono" style="display: none;">
+                </div>
+                
+                <div class="llantas">
+                    <img src="img/llanta01.png" alt="" class="llanta" onclick="millanta(1)">
+                    <img src="img/checked.png" alt="" id="llantanegra" class="icono">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+    
+</body>
+<script src="js/motor.js"></script>
+</html>

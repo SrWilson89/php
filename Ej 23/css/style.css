@@ -1,0 +1,94 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+.coches{
+    width: 70%;
+}
+
+.configurador{
+    width: 30vw;    
+}
+
+#fotocoche{
+    width: 100%;
+}
+
+#fotocoche img{
+    width: 100%;
+}
+
+.contencolor{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.color{
+    margin-right: 5px;
+    height: 55px;
+    width: 55px;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.contenllanta{
+    width: 30vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.llanta{
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.llantas{
+    position: relative;
+    margin-right: 15px !important;
+    width: 50%;
+}
+
+.llantas img{
+    width: 95%;
+}
+
+.cajacolor{
+    position: relative;
+    width: 30%;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.cajacolor img{
+    width: 100%;
+    height: auto;
+}
+
+.icono{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 35% !important;
+    height: 35% !important;
+}
+
+.icono2{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 50%!important;  
+}
+
+div p{
+    font-weight: bolder;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}

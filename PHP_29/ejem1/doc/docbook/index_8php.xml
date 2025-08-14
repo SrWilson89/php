@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index_8php" xml:lang="en-US">
+<title>C:/xampp/htdocs/doc/ejem1/src/index.php File Reference</title>
+<indexterm><primary>C:/xampp/htdocs/doc/ejem1/src/index.php</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_index_8php_1a26dfcfb76ac74fa0f5b07cbfd8fd126d">saludar</link> (string $name)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>const <link linkend="_index_8php_1a54a435fe85d5d08c02b1b03d81ebb6b9">PI</link> = 3.1416</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_index_8php_1a26dfcfb76ac74fa0f5b07cbfd8fd126d"/><section>
+    <title>saludar()</title>
+<indexterm><primary>saludar</primary><secondary>index.php</secondary></indexterm>
+<indexterm><primary>index.php</primary><secondary>saludar</secondary></indexterm>
+<para><computeroutput>saludar (string $name)</computeroutput></para>
+<para>Escribe el saludo a una persona</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$name</entry><entry>
+<para>Nombre de la persona </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_index_8php_1a54a435fe85d5d08c02b1b03d81ebb6b9"/><section>
+    <title>PI</title>
+<indexterm><primary>PI</primary><secondary>index.php</secondary></indexterm>
+<indexterm><primary>index.php</primary><secondary>PI</secondary></indexterm>
+<para><computeroutput>const PI = 3.1416</computeroutput></para></section>
+</section>
+</section>

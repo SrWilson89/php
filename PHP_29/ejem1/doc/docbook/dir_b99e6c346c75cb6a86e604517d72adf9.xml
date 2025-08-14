@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_b99e6c346c75cb6a86e604517d72adf9" xml:lang="en-US">
+<title>C:/xampp/htdocs/doc Directory Reference</title>
+<indexterm><primary>C:/xampp/htdocs/doc Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_8ed77686f18c5e83a31a70b5aecf652c">ejem1</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

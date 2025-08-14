@@ -1,0 +1,14 @@
+.img{
+    height: 50px;
+    width: 50px;
+    margin-right: 5px;
+}
+
+#imagenes{
+    height: 150px;    
+}
+
+#imagenes img{
+    height: 100%;
+    margin-left: 15px;
+}

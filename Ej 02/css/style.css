@@ -1,0 +1,8 @@
+.js-copytextarea{
+    display: table;
+    margin-top: 10px;
+    width: calc(95vw - 55px);
+    border: 5px double black;
+    padding: 5px 15px;
+    background-color: blanchedalmond;
+}

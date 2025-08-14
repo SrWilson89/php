@@ -1,0 +1,17 @@
+{
+    "name": "clodo/ejemplo4",
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Clodo\\Ejemplo4\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Juan Claudio Martin",
+            "email": "jcma73@yahoo.es"
+        }
+    ]
+}

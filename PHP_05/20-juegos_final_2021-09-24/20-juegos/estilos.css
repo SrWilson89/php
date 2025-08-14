@@ -1,0 +1,33 @@
+.rojo {
+  color: red;
+}
+
+.right {
+  text-align: right;
+}
+.games_container {
+  display: flex;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  border: 1px black solid;
+  width: 300px;
+  height: 150px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.card h4 {
+  margin: 0px;
+}
+
+.card .card-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica examen</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="shortcut icon" href="img/ico9.jpg" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <button onclick="mostrarModal()"><i class='bx bx-cart-alt bx-md'></i></button>
+    <div id="productos">
+
+    </div>
+
+
+    <div id="myModal" class="modal">
+        <div class="modal-contenedor">
+            <span class="close" onclick="cerrarModal()"><i class='bx bxs-x-circle'></i></span>
+            <h2>Datos de compra:</h2>
+            <div id="venta">
+                
+            </div>
+            <div class="botones">
+                <input type="button" value="Seguir comprando">
+                <input type="button" value="Comprar">
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="js/motor.js"></script>
+</html>

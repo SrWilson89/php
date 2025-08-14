@@ -1,0 +1,36 @@
+body{
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: ivory;
+}
+
+input, label, option, select{
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenedor{
+    padding: 10px;    
+}
+
+.linea{
+    padding: 5px 15px;
+    width: 50%;
+    margin-left: 25%;
+    background-color: lavender;
+}
+
+button{
+    background-color: #0097e6;
+    color: cornsilk;
+    padding: 5px 15px;
+    font-size: 2em;
+    margin-left: 30%;
+}
+
+button:hover{
+    background-color: #192a56;
+    color: cornsilk;
+    cursor: pointer;
+
+}

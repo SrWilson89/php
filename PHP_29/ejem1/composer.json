@@ -1,0 +1,18 @@
+{
+    "name": "campus/ejem1",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Figuras": "src/figuras"
+        }
+    },
+    "authors": [
+        {
+            "name": "Juan Claudio Martin",
+            "email": "jcma73@yahoo.es"
+        }
+    ],
+    "require-dev": {
+        "phpdocumentor/shim": "^3.1"
+    }
+}

@@ -1,0 +1,194 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: lightgray;
+}
+
+section{
+    height: 100vh;
+    width: calc(100vw - 17px);
+}
+
+.contenedor{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.linea img{
+    margin-right: 20%;
+    margin-left: 10%;
+    height: 60%;
+}
+
+.linea{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+}
+
+button{
+    padding: 5px 15px;
+    font-size: 1.2em;
+    border-radius: 25px;
+    border: transparent 1px solid;
+}
+
+button:hover{
+    cursor: pointer;
+    color: purple;
+    background-color: transparent;
+    border: 1px solid blue;
+}
+
+.izq{
+    width: calc(50% - 20px);
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    
+    margin-top: calc(50vh - (30vh + 20px)) ;
+}
+
+.apa{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.lin{
+    width: 100%;       
+    display: flex;
+    width: fit-content;
+    margin-bottom: 15px;    
+}
+
+.lin img{
+    margin-right: 15px;
+}
+
+.lin button{
+    margin-right: 15px;
+}
+
+.mor{
+    background-color: plum;
+    padding: 5px 15px;
+    border-radius: 25px;
+}
+
+.der{
+    width: calc(50% - 20px);
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.comienza{
+    background-color: transparent;
+    color: purple;
+    
+    border: 1px purple solid;
+}
+
+.morado{
+    color: white;
+    background-color: purple;
+}
+
+.sombra{
+    width: 50vw;
+    height: 80vh;
+    background-color: rgb(96, 96, 224);
+    margin-left: 25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+}
+
+form{
+    padding: 20px;
+    width: 40vw;
+    height: 70vh;    
+    
+    background-color: #0abde3;
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    border-radius: 25px;
+    box-shadow: #2e86de 5px 5px 5px;
+}
+
+.formulario{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+form h2, form input{
+    width: 80%;
+    margin-top: 10px;
+    padding: 5px 15px;
+}
+
+.bmor{
+    background-color: purple;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.2em;
+}
+
+form h2{
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    text-shadow: #000000 2px 2px 0px;
+}
+
+.abajo{
+    width: 100%;
+    height: 70px;
+    border-top: 2px lightgrey solid;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+}
+
+.abajo p{
+    margin-top: 5px;
+    text-shadow: #ffffff 1px 1px 0px;
+}
+
+.trampas{
+    width: 100%;
+    height: 10vh;
+}
+
+#registro{
+    background-color: whitesmoke;
+}

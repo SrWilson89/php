@@ -1,0 +1,26 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.cuadro{
+    width: 5vw;
+    height: 5vw;
+    cursor: pointer;
+    background-color: #ffffff;
+    margin: 0.50px;
+}
+
+#contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+}
+
+.oculto{
+    display: none;
+}

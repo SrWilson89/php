@@ -1,0 +1,282 @@
+<style>
+body{
+    font-size: 2.5em;
+}
+
+button{
+    font-size: 1.5em;
+    padding: 5px 15px;
+}
+
+.atk{
+    width: 50px;
+    margin-top: 5px;
+}
+
+.win{
+    width: 50vw;
+}
+
+div{
+    text-align: center;
+}
+
+#mons{
+    width: 100%;
+    height: 40vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#mons img{
+    height: 100%;    
+}
+
+#imagen{
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-name: sBote;
+    animation-iteration-count:initial;
+  }
+  
+  @keyframes sBote{
+    0% { margin-left: 25%;}
+    50% { margin-left: -25%;}    
+    100% { margin-left: 0%;}
+  }
+</style>
+
+<body>
+
+    <div id="mons">
+
+    </div>
+    
+    <div id="lp">
+
+    </div>
+    <button onclick="generar1()">Golpea</button>
+    <button onclick="generar2()">Dispara</button>
+    <button onclick="generar3()">Apuñala</button>
+    <button onclick="generar4()">Usa magia</button>
+    <div id="ola">
+        Comienza el combate
+    </div>   
+    
+</body>
+
+<script>
+x=Math.round(20000+Math.random()*(100000-20000));
+dtotal=0;
+v1=Math.round(1+Math.random()*(10-1));
+v2=Math.round(1+Math.random()*(10-1));
+v3=Math.round(1+Math.random()*(10-1));
+v4=Math.round(1+Math.random()*(10-1));
+
+monstruo=Math.round(1+Math.random()*(10-1));
+
+mueve=2;
+
+function pintaenemigo(){
+    if (monstruo==1){
+        document.getElementById('mons').innerHTML=`<img id="imagen" src="https://i.pinimg.com/originals/51/2f/f5/512ff5c3ba22ecc638465fb60b525128.png" alt="">`;
+    }
+
+    if (monstruo==2){
+        document.getElementById('mons').innerHTML=`<img id="imagen" src="https://i.pinimg.com/originals/a1/6d/85/a16d8504ffd4edffadfdb49eef4ff96f.png" alt="">`;
+    }
+
+    if (monstruo==3){
+        document.getElementById('mons').innerHTML=`<img id="imagen" src="https://i.pinimg.com/originals/41/70/62/4170624e562c9fbd433b49a99ca0e32d.png" alt="">`;
+    }
+
+    if (monstruo==4){
+        document.getElementById('mons').innerHTML=`<img id="imagen" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8ef41a56-b784-461d-b346-9b6ce1f914ca/ddta71p-079a0577-6ac1-4d47-a571-610c290d9041.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhlZjQxYTU2LWI3ODQtNDYxZC1iMzQ2LTliNmNlMWY5MTRjYVwvZGR0YTcxcC0wNzlhMDU3Ny02YWMxLTRkNDctYTU3MS02MTBjMjkwZDkwNDEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.f9fEX1alCSvJmtDyLV6Q7Y9rKWOMW3DOUKxpHyaTiM0" alt="">`;
+    }
+
+    if (monstruo==5){
+        document.getElementById('mons').innerHTML=`<img id="imagen" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/96551409-eddd-4b72-92da-7fd74699b762/dc9i9yt-95576411-8449-4193-9496-fd6585a69854.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzk2NTUxNDA5LWVkZGQtNGI3Mi05MmRhLTdmZDc0Njk5Yjc2MlwvZGM5aTl5dC05NTU3NjQxMS04NDQ5LTQxOTMtOTQ5Ni1mZDY1ODVhNjk4NTQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.IzpOY4hpi_f_v8-YRSaiK-D-6PBrOXgnZmrchQ9QEtk" alt="">`;
+    }
+
+    if (monstruo==6){
+        document.getElementById('mons').innerHTML=`<img id="imagen" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f3e2e797-0644-4502-bd84-fcd71b7060e1/dczd4fb-80d46d8a-74d8-441d-88da-2e22f479b067.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2YzZTJlNzk3LTA2NDQtNDUwMi1iZDg0LWZjZDcxYjcwNjBlMVwvZGN6ZDRmYi04MGQ0NmQ4YS03NGQ4LTQ0MWQtODhkYS0yZTIyZjQ3OWIwNjcucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.y6WZW3lfotpQgWQ2j0ypBW2xCKunf8wGTTpO-OM9mkg" alt="">`;
+    }
+
+    if (monstruo==7){
+        document.getElementById('mons').innerHTML=`<img id="imagen" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6f93cbd0-7f38-44a8-b569-f39940613d27/dbiauus-f8c4a419-4a48-44a2-b2e3-b8e2b826c8f6.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzZmOTNjYmQwLTdmMzgtNDRhOC1iNTY5LWYzOTk0MDYxM2QyN1wvZGJpYXV1cy1mOGM0YTQxOS00YTQ4LTQ0YTItYjJlMy1iOGUyYjgyNmM4ZjYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.U5pac3C1nCKDMh9OSyxUulXbCc_1_BERGAItIwqJRU0" alt="">`;
+    }
+
+    if (monstruo==8){
+        document.getElementById('mons').innerHTML=`<img id="imagen" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/06cb28af-a15c-45d3-b1b6-fcbc1910e0c3/ddccwcb-2f18e90e-d7d5-4dba-85ab-83751383a09f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzA2Y2IyOGFmLWExNWMtNDVkMy1iMWI2LWZjYmMxOTEwZTBjM1wvZGRjY3djYi0yZjE4ZTkwZS1kN2Q1LTRkYmEtODVhYi04Mzc1MTM4M2EwOWYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.aF-SWL38JdDS47_5PGM6CgwzPbDnLj7gqTKOWQUWr84" alt="">`;
+    }
+
+    if (monstruo==9){
+        document.getElementById('mons').innerHTML=`<img id="imagen" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/43b29b69-3bd3-42fe-9c9b-27b69b86fcb0/dcrbun3-74389f3f-7b8c-4216-9414-254c03598329.png/v1/fill/w_600,h_717,strp/powercode_talker__full_render__by_kogadiamond1080_dcrbun3-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzE3IiwicGF0aCI6IlwvZlwvNDNiMjliNjktM2JkMy00MmZlLTljOWItMjdiNjliODZmY2IwXC9kY3JidW4zLTc0Mzg5ZjNmLTdiOGMtNDIxNi05NDE0LTI1NGMwMzU5ODMyOS5wbmciLCJ3aWR0aCI6Ijw9NjAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.2A_nDD23QNajZTPqQh0Nyc7K29baieKWQs0rkS3cX70" alt="">`;
+    }
+
+    if (monstruo==10){
+        document.getElementById('mons').innerHTML=`<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/627fe721-846f-4f75-ac61-111ca00b27dd/dc56ywd-2ac5df9c-7576-4eb7-a0a7-4139f52eade3.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzYyN2ZlNzIxLTg0NmYtNGY3NS1hYzYxLTExMWNhMDBiMjdkZFwvZGM1Nnl3ZC0yYWM1ZGY5Yy03NTc2LTRlYjctYTBhNy00MTM5ZjUyZWFkZTMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.N9TzOYANRvsDGkVfJMHRw3CtSymeD6JlWJlMzh1HSXQ" alt="" id="imagen">`;
+    }
+}
+
+function pintar(){
+    
+    document.getElementById('lp').innerHTML=`${x} / ${x}`;
+    pintaenemigo();
+}
+
+pintar();
+
+
+function generar1(){
+    z=Math.round(v1*(1+Math.random()*(10000-1)));
+    valor=Math.round(100+Math.random()*(z));
+
+    document.getElementById('ola').innerHTML=`Causaste ${valor} puntos de daño <img src="https://png.pngtree.com/element_our/20190524/ourlarge/pngtree-hand-painted-clenched-fist-for-commercial-use-image_1095099.jpg" alt="" class="atk">`;
+
+    // ---------------------------- copiar a partir de aqui ------------------------
+
+    dtotal+=valor;
+
+    document.getElementById('ola').innerHTML+=`<br>Durante el combate has caudado un total de ${dtotal} puntos de daño`
+
+    y=x-dtotal;
+
+    document.getElementById('lp').innerHTML=`${x} / <span id="colores">${y}</span>`;
+
+    document.getElementById('imagen').style.animationIterationCount=`${mueve}`;
+
+    if (y<=0){
+        document.getElementById('lp').innerHTML=`<img src="https://as01.epimg.net/us/imagenes/2021/06/28/futbol/1624898858_807011_1624900003_noticia_normal_recorte1.jpg" alt="" class="win">`;
+        document.getElementById('mons').innerHTML=``;
+        document.getElementById('mons').style.height='0%';
+        document.getElementById('mons').style.padding='0%';
+    }
+
+    if(y<=(x/2)){
+        document.getElementById('colores').style.color="#F79F1F";
+        document.getElementById('mons').style.backgroundColor="#F79F1F88"
+    }
+
+    if(y<=(x/4)){
+        document.getElementById('colores').style.color="#EA2027"
+        document.getElementById('mons').style.backgroundColor="#EA202788"
+    }
+
+    mueve++;
+}
+
+function generar2(){
+    z=Math.round(v2*(1+Math.random()*(10000-1)));
+    valor=Math.round(100+Math.random()*(z));
+
+    document.getElementById('ola').innerHTML=`Causaste ${valor} puntos de daño <img src="https://static.wikia.nocookie.net/godofwar/images/7/7a/Arco_de_Garra.png/revision/latest?cb=20171215193356&path-prefix=es" alt="" class="atk">`;
+
+    // ---------------------------- copiar a partir de aqui ------------------------
+
+    dtotal+=valor;
+
+    document.getElementById('ola').innerHTML+=`<br>Durante el combate has caudado un total de ${dtotal} puntos de daño`
+
+    y=x-dtotal;
+
+    document.getElementById('lp').innerHTML=`${x} / <span id="colores">${y}</span>`;
+
+    document.getElementById('imagen').style.animationIterationCount=`${mueve}`;
+
+    if (y<=0){
+        document.getElementById('lp').innerHTML=`<img src="https://as01.epimg.net/us/imagenes/2021/06/28/futbol/1624898858_807011_1624900003_noticia_normal_recorte1.jpg" alt="" class="win">`;
+        document.getElementById('mons').innerHTML=``;
+        document.getElementById('mons').style.height='0%';
+        document.getElementById('mons').style.padding='0%';
+    }
+
+    if(y<=(x/2)){
+        document.getElementById('colores').style.color="#F79F1F";
+        document.getElementById('mons').style.backgroundColor="#F79F1F88"
+    }
+
+    if(y<=(x/4)){
+        document.getElementById('colores').style.color="#EA2027"
+        document.getElementById('mons').style.backgroundColor="#EA202788"
+    }
+
+    mueve++;
+}
+
+function generar3(){
+    z=Math.round(v3*(1+Math.random()*(10000-1)));
+    valor=Math.round(100+Math.random()*(z));
+
+    document.getElementById('ola').innerHTML=`Causaste ${valor} puntos de daño <img src="https://previews.123rf.com/images/spaxia/spaxia0908/spaxia090800679/5387461-la-mano-con-pu%C3%B1al.jpg" alt="" class="atk">`;
+
+    // ---------------------------- copiar a partir de aqui ------------------------
+
+    dtotal+=valor;
+
+    document.getElementById('ola').innerHTML+=`<br>Durante el combate has caudado un total de ${dtotal} puntos de daño`
+
+    y=x-dtotal;
+
+    document.getElementById('lp').innerHTML=`${x} / <span id="colores">${y}</span>`;
+
+    document.getElementById('imagen').style.animationIterationCount=`${mueve}`;
+
+    if (y<=0){
+        document.getElementById('lp').innerHTML=`<img src="https://as01.epimg.net/us/imagenes/2021/06/28/futbol/1624898858_807011_1624900003_noticia_normal_recorte1.jpg" alt="" class="win">`;
+        document.getElementById('mons').innerHTML=``;
+        document.getElementById('mons').style.height='0%';
+        document.getElementById('mons').style.padding='0%';
+    }
+
+    if(y<=(x/2)){
+        document.getElementById('colores').style.color="#F79F1F";
+        document.getElementById('mons').style.backgroundColor="#F79F1F88"
+    }
+
+    if(y<=(x/4)){
+        document.getElementById('colores').style.color="#EA2027"
+        document.getElementById('mons').style.backgroundColor="#EA202788"
+    }
+
+    mueve++;
+}
+
+function generar4(){
+    z=Math.round(v4*(1+Math.random()*(10000-1)));
+    valor=Math.round(100+Math.random()*(z));
+
+    document.getElementById('ola').innerHTML=`Causaste ${valor} puntos de daño <img src="https://store-images.s-microsoft.com/image/apps.24229.13861797469838410.1c3a356f-60af-4082-bb99-177a37426730.20380802-fb78-40bf-b0bd-178c559f7673?mode=scale&q=90&h=300&w=300" alt="" class="atk">`;
+
+    // ---------------------------- copiar a partir de aqui ------------------------
+
+    dtotal+=valor;
+
+    document.getElementById('ola').innerHTML+=`<br>Durante el combate has caudado un total de ${dtotal} puntos de daño`
+
+    y=x-dtotal;
+
+    document.getElementById('lp').innerHTML=`${x} / <span id="colores">${y}</span>`;
+
+    document.getElementById('imagen').style.animationIterationCount=`${mueve}`;
+
+    if (y<=0){
+        document.getElementById('lp').innerHTML=`<img src="https://as01.epimg.net/us/imagenes/2021/06/28/futbol/1624898858_807011_1624900003_noticia_normal_recorte1.jpg" alt="" class="win">`;
+        document.getElementById('mons').innerHTML=``;
+        document.getElementById('mons').style.height='0%';
+        document.getElementById('mons').style.padding='0%';
+    }
+
+    if(y<=(x/2)){
+        document.getElementById('colores').style.color="#F79F1F";
+        document.getElementById('mons').style.backgroundColor="#F79F1F88"
+    }
+
+    if(y<=(x/4)){
+        document.getElementById('colores').style.color="#EA2027"
+        document.getElementById('mons').style.backgroundColor="#EA202788"
+    }
+
+    mueve++;
+}
+</script>

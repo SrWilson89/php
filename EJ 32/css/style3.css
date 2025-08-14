@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    width: calc(100vw - 0px);
+    overflow: hidden;
+    
+}
+
+header{
+    width: calc(100vw - 0px);
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: aqua;
+    padding: 10px 0px;
+}
+
+header img{
+    height: 100%;
+}
+
+header h1{
+    font-size: 2.5em;
+}
+
+header button{
+    font-size: 1.5em;
+    padding: 5px 15px;
+}
+
+.enlaces{
+    width: calc(100vw - 0px);
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f1f2f6;
+}
+
+.enlaces nav a{
+    margin-right: 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.contenedor{
+    width: calc(100vw - 10px);
+    overflow: auto;
+    height: 80vh;
+    padding: 5px 15px;
+    font-size: 2em;
+}
+
+.contenedor h2{
+    padding-left: 35%;
+}

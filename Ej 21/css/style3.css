@@ -1,0 +1,21 @@
+.horizontal{
+    width: 100%;
+}
+
+.caja{
+    width: 20vw;
+    background-color: darksalmon;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px;
+}
+
+.caja input{
+    margin-top: 5px;
+}
+
+p{
+    cursor: pointer;
+}

@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    width: calc(100vw - 18px);
+    overflow: hidden;
+}
+
+header{
+    width: 100vw;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: aqua;
+    padding: 10px 0px;
+}
+
+header img{
+    height: 100%;
+}
+
+header h1{
+    font-size: 2.5em;
+}
+
+header button{
+    font-size: 1.5em;
+    padding: 5px 15px;
+}
+
+.enlaces{
+    width: 100vw;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f1f2f6;
+}
+
+.enlaces nav a{
+    margin-right: 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.vendidos{
+    width: 100vw;
+    height: 80vh;
+}
+
+.vendidos h2{
+    width: 100vw;
+    text-align: center;
+}
+
+.contenedor{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cajita{
+    height: 100%;
+    width: 30%;
+}
+
+.cajita img{
+    width: 100%;
+}

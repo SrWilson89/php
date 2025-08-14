@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.azulejos{
+    width: 25%;
+    height: 30vh;
+    padding: 5px 15px;
+    background-color: rgba(236, 234, 234, 0.952);
+    margin-top: 15px;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    
+}
+
+.contenedor{
+    width: calc(100vw - 20px);
+    height: calc(100vh - 0px);
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: rgb(1, 96, 134);
+}
+
+.cabecera{
+    width: calc(100vw - 20px);
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;    
+}
+
+.linea{
+    height: 50%;
+    width: 100%;
+    text-align: center;
+}

@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blanco{
+    width: 12.5%;
+    height: 12.5%;
+    background-color: white;
+    
+}
+
+.negro{
+    width: 12.5%;
+    height: 12.5%;
+    background-color: black;
+    
+}
+
+#contenedor{
+    width: 700px;
+    height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #B22222;
+}

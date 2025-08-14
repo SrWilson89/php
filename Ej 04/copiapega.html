@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .dise{
+    
+    margin-top: 10px;
+    width: 95%;    
+    border: 5px double black;
+    padding: 5px 15px;
+    background-color: blanchedalmond;
+
+    }
+</style>
+<body>
+
+    <textarea name="" id="facilitador" cols="158" rows="4"></textarea> 
+        
+    <button onclick="crear()">Crear</button>
+        
+    <div id="acortador"></div>
+
+</body>
+
+<script>
+
+    function crear(){
+
+    datos=document.getElementById('facilitador').value;
+
+    document.getElementById('acortador').innerHTML+=`
+    <textarea class="dise" rows="5">
+${datos}
+    </textarea>`   
+    ;
+    sustituir();
+    }
+
+    function sustituir(){
+        document.getElementById('facilitador').value=``; 
+    }
+</script>
+</html>

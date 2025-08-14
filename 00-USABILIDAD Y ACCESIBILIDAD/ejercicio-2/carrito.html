@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC-OMEGA - Carrito</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="ocultar">
+        <a href="#contenido">Salta encabezado e ir al contenido principal.</a>
+    </div>
+    <header>
+        <div class="login">
+            <button aria-describedby="descLogin">Login</button>
+            <div id="descLogin" class="ocultar">Pulsa el botón de login para identificarte y poder realizzar compras.</div>
+        </div>
+        <div class="logo">
+            <img src="imagenes/logo-campusomega_400x400.gif" alt="">
+            PC-OMEGA
+        </div>
+    </header>
+    <nav class="menu">
+        <ul>
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="carrito.html">Carrito</a></li>
+            <li><a href="quien.html">¿Quienes somos?</a></li>
+        </ul>
+    </nav>
+    <main class="carrito">
+        <h1 id="contenido" tabindex="0">CARRITO</h1>
+        <table tabindex="0">
+            <caption>Productos en el carrito</caption>
+            <thead>
+                <th scope="pro">PRODUCTO</th>
+                <th scope="cant">CANTIDAD</th>
+                <th scope="pre">PRECIO</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Producto 1</td>
+                    <td>2 unidades</td>
+                    <td>50 €</th>
+                </tr>
+                <tr>
+                    <td>Producto 2</td>
+                    <td>1 unidad</td>
+                    <td>30 €</th>
+                </tr>
+                <tr>
+                    <td>Producto 3</td>
+                    <td>1 unidad</td>
+                    <td>10 €</th>
+                </tr>
+            </tbody>
+            <tfoot>
+                <th colspan=2>TOTAL COMPRA</th>
+                <td>90 €</td>
+            </tfoot>
+        </table>
+
+        <form>
+            <legend tabindex="0">Formulario para finalizar la compra</legend>
+            <div>
+                <label for="nombre">Nombre completo</label>
+                <input id="nombre" type="text">
+            </div>
+            <div>
+                <label for="email">Correo electrónico</label>
+                <input id="email" type="email">
+            </div>
+
+            <input type="submit" value="Comprar">
+        </form>
+    </main>
+</body>
+</html>

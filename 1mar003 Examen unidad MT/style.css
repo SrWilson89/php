@@ -1,0 +1,113 @@
+*{
+margin: 5px;
+padding: 5px;
+
+
+}
+
+.titulo{
+
+height: 120px;
+width: 100%;
+display: flex;
+justify-content: space-around;
+align-items: center;
+background-color: thistle;
+
+}
+.titulo img{
+
+    height: 80px;
+    width: 80px;
+    border: 2px solid white;
+    border-radius: 2px;
+}
+.oculto{
+
+position: relative;
+left: -1000px;
+
+}
+
+.menu{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.menu a{
+
+    text-decoration: none;
+}
+h1{
+    text-align: center;
+}
+
+.artuno{
+
+height: 400px;
+width: 100%;
+background-color: rgba(210, 180, 140, 0.609);
+
+}
+.artdos{
+
+    height: 400px;
+    width: 100%;
+    background-color: rgba(185, 167, 145, 0.849); 
+}
+
+.contenido{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.contenido img{
+
+height: 300px;
+width: 300px;
+margin: 10px;
+
+
+}
+
+.table{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+caption{
+    text-decoration: underline;
+}
+
+table, th, tr{
+
+    text-align: center;
+    color: rgb(7, 5, 37);
+
+    border: 2px solid rgb(63, 14, 177);
+
+}
+
+.buscador{
+
+    height: 100px;
+    width: 100%;
+    background-color: rgba(212, 160, 142, 0.671);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+.buscador input{
+
+    width: 500px;
+
+}

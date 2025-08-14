@@ -1,0 +1,73 @@
+<?php
+/*
+    Crea un programa que:
+    a. Genere dos vectores con 10 números 
+       aleatorios entre 1 y 100.
+    b. Escribe los dos vectores.
+    c. Escribe la intersección
+    d. Escribe la unión (No es necesario 
+       tener en cuenta los repetidos)
+*/
+$alea1 = generarArray(10);
+$alea2 = generarArray(10);
+echo "<br>Numeros 1: ";
+escribirArray($alea1);
+echo "<br>Numeros 2: ";
+escribirArray($alea2);
+$interseccion = interseccionArrays($alea1, $alea2);
+echo "<br>Interseccion: ";
+escribirArray($interseccion);
+$union = unionArrays($alea1, $alea2);
+echo "<br>Union: ";
+escribirArray($union);
+
+function generarArray(int $cantidad)
+{
+    $num = [];
+    for ($i = 1; $i <= $cantidad; $i++) {
+        $num[] = rand(1, 100);
+    }
+    return $num;
+}
+
+function escribirArray(array $data)
+{
+    for ($i = 0; $i < count($data); $i++) {
+        echo $data[$i] . " ";
+    }
+}
+
+function interseccionArrays(array $data1, array $data2)
+{
+    $inter = [];
+    for ($i = 0; $i < count($data1); $i++) {
+        if (estaNumero($data2, $data1[$i])) {
+            $inter[] = $data1[$i];
+        }
+    }
+    return $inter;
+}
+
+function estaNumero(array $data, int $numero)
+{
+    // Devuelve true si el $numero esta en el array $data
+    $ok = false;
+    for ($i = 0; $i < count($data); $i++) {
+        if ($data[$i] === $numero) {
+            $ok = true;
+        }
+    }
+    return $ok;
+}
+
+function unionArrays(array $data1, array $data2)
+{
+    $union = [];
+    for ($i = 0; $i < count($data1); $i++) {
+        $union[] = $data1[$i];
+    }
+    for ($i = 0; $i < count($data2); $i++) {
+        $union[] = $data2[$i];
+    }
+    return $union;
+}

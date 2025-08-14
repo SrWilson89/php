@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    width: calc(100vw - 17px);
+    overflow: hidden;
+}
+
+header{
+    width: calc(100% - 0px);
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: aqua;
+    padding: 10px 0px;
+}
+
+header img{
+    height: 100%;
+}
+
+header h1{
+    font-size: 2.5em;
+}
+
+header button{
+    font-size: 1.5em;
+    padding: 5px 15px;
+}
+
+.enlaces{
+    width: calc(100% - 0px);
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f1f2f6;
+}
+
+.enlaces nav a{
+    margin-right: 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.contenedor{
+    width:  calc(100vw - 0px);
+    height: 100vh;
+    overflow-y: auto;
+    background-color: rgba(255, 127, 80, 0.5);
+}
+
+.fila{
+    width: calc(100% - 30px);
+    
+    height: 120px;
+    display: flex;
+    padding: 5px 15px;
+    align-items: center;
+    
+}
+
+.fila img{
+    height: 100%;
+}
+
+.fila p{
+    font-size: 1.2em;
+    margin-left: 15px;
+}
+
+.fila button{
+    padding: 5px 15px;
+    margin-left: 15px;
+    font-size: 1.2em;
+}
+
+.total{
+    width: calc(100% - 30px);
+    padding: 5px 15px;
+    font-size: 1.5em;
+}

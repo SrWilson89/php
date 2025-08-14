@@ -1,0 +1,26 @@
+Laura operadores aritmeticos UwU INICIO
+
+x=0;
+console.log(x)
+x++
+console.log(x)
+x++
+console.log(x)
+
+x=0;
+console.log(x)
+x=x+1
+console.log(x)
+x=x+1
+console.log(x)
+
+ESTE SE CORROMPE
+
+x=0;
+console.log(x)
+x=x++
+console.log(x)
+x=x++
+console.log(x)
+
+Laura operadores aritmeticos UwU FIN

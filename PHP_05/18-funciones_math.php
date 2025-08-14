@@ -1,0 +1,21 @@
+<?php
+    /*
+        FUNCIONES MATEMATICAS
+    */
+    /*
+        rand()
+        rand_int()
+        srand()
+        mt_rand()
+        mt_srand()
+        round()
+        ceil()
+        abs()
+        floor()
+        intdiv()
+        exp()
+        log()
+        log10()
+        pi()
+        pow()
+    */

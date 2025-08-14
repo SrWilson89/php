@@ -1,0 +1,137 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cajon{
+    height: 80vh;
+    width: 320px;
+    background-color: #c8d6e5;
+    border-radius: 25px;
+    overflow: auto;
+    
+}
+
+.cabeza{
+    width: 100%;
+    height: 10vh;
+    background-color: rgba(170, 186, 255, 0.904);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cabeza i{
+    margin-left:10px;
+    font-size: 1.4em;
+}
+
+.fa-plus:hover{
+    color: greenyellow;
+    text-shadow: 2px 2px 2px black;
+    cursor: pointer;
+}
+
+.fa-eraser:hover{
+    color: rgb(184, 0, 0);
+    text-shadow: 2px 2px 2px black;
+    cursor: pointer;
+}
+
+.cabeza input{
+    font-size: 1.2em;
+}
+
+#cuerpo{
+    width: 100%;
+    height: 60vh;
+    overflow-y: hidden;
+    background-color: rgba(255, 255, 255, 0.300);
+    display: table;
+    justify-content: center;
+    align-items: flex-start ; 
+    flex-wrap: wrap;
+}
+
+.datos{
+    margin-top: 10px;
+    margin-left: 2em;
+    width: 75%;
+    height: 20px;
+    padding: 5px 15px;
+    background-color: ivory;
+    border-radius: 10px;
+    position: relative;
+    flex-wrap: wrap;
+    
+}
+
+.cerrar{
+    position: absolute;
+    top: 0px;
+    font-size: 1.4em;
+    left: -1.2em;
+    padding: 5px 0px;
+    color: rgb(10, 0, 70);
+}
+
+.cerrar:hover{
+    color: #e74c3c;
+    cursor: pointer;
+}
+
+.check{
+    position: absolute;
+    top: 0px;
+    font-size: 1.4em;
+    right: 5px;
+    padding: 5px 0px;
+    color: rgb(10, 0, 70);
+}
+
+.check:hover{
+    color: #27ae60;
+    cursor: pointer;
+}
+
+#tareas{
+    width: 100%;
+    height: 5vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+#completadas{
+    width: 100%;
+    height: calc(5vh - 5px);
+    background-color: #333;
+    color: oldlace;
+    border-top: 5px solid navy;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    font-weight: bolder;
+}
+
+.fa-trash-alt{
+    margin-left: 5px;
+}
+
+.fa-trash-alt:hover{
+    color: #e74c3c;
+    cursor: pointer;
+}
+

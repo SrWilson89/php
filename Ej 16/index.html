@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/ico9.jpg" type="image/x-icon">
+</head>
+
+<body>
+
+    <header>
+        <button onclick="mostrar(1)">
+            Mostrar Contenedor 1
+            <input type="number" class="oculto" id="mc1" value="1">
+        </button>
+
+        <button onclick="mostrar(2)">
+            Mostrar Contenedor 2
+            <input type="number" class="oculto" id="mc2" value="1">
+        </button>
+
+        <button onclick="mostrar(3)">
+            Mostrar Contenedor 3
+            <input type="number" class="oculto" id="mc3" value="1">
+        </button>
+
+        <button onclick="mostrar(4)">
+            Mostrar Contenedor 4
+            <input type="number" class="oculto" id="mc4" value="0">
+        </button>
+
+        <button onclick="mostrar(5)">
+            Mostrar Contenedor 5
+            <input type="number" class="oculto" id="mc5" value="0">
+        </button>
+
+
+    </header>
+
+    <div id="contenedor1">
+        <button onclick="mas()">
+            Mas
+        </button>
+
+        <button onclick="menos()">
+            Menos
+        </button>
+
+        <div id="valor">
+            0
+        </div>
+    </div>
+
+    <div id="contenedor2">
+        <input type="text" id="buscar">
+        <button onclick="mostrar()">
+            Enviar
+        </button>
+    </div>
+
+    <div id="contenedor3">
+        <form action="#" method="get"></form>
+        Nombre completo: <input id="nombreCompleto"><br>
+        Edad: <input id="edad"><br>
+        Correo: <input id="correo" name="email"><br>
+        Enviar: <input type="submit" onclick="return comprobarFormulario()"><br>
+        limpiar: <input type="reset"><br>
+    </div>
+
+    <div id="contenedor4">
+        <button onclick="array()">
+            Array
+        </button>
+
+        <button onclick="array2()">
+            Array 2
+        </button>
+    </div>
+
+</body>
+<script src="js/motor.js"></script>
+
+</html>

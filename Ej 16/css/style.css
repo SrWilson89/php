@@ -1,0 +1,28 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+div button, div div{
+    font-size: 2em;
+    margin-left: 5px;
+}
+
+#contenedor1{
+    width: 100%;
+    padding: 5px;
+    display: flex;
+}
+
+div button{
+    padding: 5px 15px;
+}
+
+header button{
+    padding: 5px 15px;
+    font-size: 1.5em;
+}
+
+.oculto{
+    display: none;
+}

@@ -1,0 +1,51 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.Contenedor{
+    width: calc(100vw - 20px);
+    height: calc(100vh - 20px);
+    background-color: #dfe4ea;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.horizontal{
+    width: 100%;    
+}
+
+.horizontal button{
+    padding: 5px 15px;
+    font-size: 1.5em;
+    cursor: pointer;    
+}
+
+.horizontal button:first-child{
+    margin-left: 5vw;
+    padding: 5px 15px;
+    font-size: 1.5em;    
+}
+
+#izq, #der{
+    width: 40%;
+    background-color: #ffffff;
+    height: 80%;
+    margin-bottom: 15px;
+}
+
+#der{
+    overflow-y: scroll;
+}
+
+#codigo{
+    width: 100%;
+    height: 100%;
+    border: transparent;
+    resize: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+}

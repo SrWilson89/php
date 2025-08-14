@@ -1,0 +1,59 @@
+.contenedor{
+    display: flex;
+}
+
+.cuadrado{
+    width: 250px;
+    height: fit-content;
+    margin: 5px;
+    padding: 15px 25px;
+    background-color: rgba(255, 250, 205, 0.8);
+    border: black 5px double;
+    border-radius: 60px 60px 20px 20px / 80px 80px 20px 20px;
+    overflow: hidden;
+}
+
+.imagen{
+    width: 100%;
+    position: relative;
+}
+
+.linea{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 2em;
+}
+
+.linea i{
+    padding: 8px 10px;
+    border-radius: 5px;
+    background-color: #2c2c54;
+    color: white;
+}
+
+.linea i:hover{
+    background-color: rgb(0, 0, 150);
+    color: ivory;
+}
+
+.imagen img{
+    width: 100%;
+}
+
+.postura{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    padding: 8px 10px;
+    background-color: #2c2c54d0;
+    color: white;
+    border-radius: 5px;
+    cursor:pointer;
+    font-size: 2em;
+}
+
+.postura:hover{
+    background-color: rgb(0, 0, 150);
+    color: ivory;
+}

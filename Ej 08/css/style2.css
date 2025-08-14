@@ -1,0 +1,58 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+form{
+    width: 30vw;
+    padding: 5px 15px;
+    background-color: rgba(40, 40, 253, 0.25);
+}
+
+label, input{
+    font-size: 1.2em;
+    margin-top: 5px;
+}
+
+select{
+    font-size: 1.2em;
+    margin-top: 5px;
+    width: 21vw;
+}
+
+input[type="reset"], input[type="submit"]{
+    padding: 5px 15px;
+}
+
+.linea{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 400px) {
+    form{
+        width: calc(100vw - 40px);
+        padding: 20px;
+        overflow: hidden;        
+    }
+    
+    .linea{
+        display: table;
+    }
+
+    
+
+    select, label, input{
+        width: 100%;
+        font-size: 1.5em;
+        margin-top: 5px;
+    }
+
+    input[type="reset"], input[type="submit"]{
+        margin: 5px 20px;
+        width: fit-content;
+    }
+
+
+}

@@ -1,0 +1,31 @@
+Normas para escribir un número romano.
+**************************************
+Los romanos empleaban estas siete letras mayúsculas para expresar 
+los números.
+
+Cada letra tiene el valor indicado en esta tabla.
+I = 1       V = 5       X = 10      L = 50
+C = 100     D = 500     M = 1000	 
+
+- Se suman sus valores
+Se colocan a la izquierda las letras de mayor valor y a la derecha las de 
+menor valor, su valor se suma.
+Las letras M, C, X, I se pueden repetir y colocar hasta tres veces seguidas.
+Las letras D, L, V se pueden colocar a la derecha para ser sumado su valor, 
+pero sólo una vez, no se pueden repetir.	
+
+Ejemplos:
+III = 3
+XV =15
+MM = 2000
+CCCLII = 352
+
+A la izquierda de otra, colocada sólo una vez le resta su valor
+La letra I colocada a la izquierda de V o de X le resta 1
+La letra X colocada a la izquierda de L o de C le resta 10
+La letra C colocada a la izquierda de D o de M le resta 100
+
+Cada una de esas letras no se puede restar a otra que sea de un valor 
+que esté a más dos puestos por delante de ella.
+
+Las letras D, L, V no se pueden colocar a la izquierda para restar.

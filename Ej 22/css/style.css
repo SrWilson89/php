@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.general{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+.titulo{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+}
+
+.datos{
+    height: calc( 100% - 170px);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.formulario{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.listado{
+    height: 100%;
+    width: 55%;
+    background-color: #ffffffee;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: auto;
+    border-radius: 25px;
+}
+
+.alumno{
+    margin-top: 5px;
+    font-size: 1.4em;
+    width: 80%;
+    color: black;
+    background-color: ivory;
+    padding: 5px 15px;
+    border-radius: 10px 20px 20px 10px;
+    border-bottom: 2px black solid;
+    border-right: 2px black solid;
+    position: relative;
+}
+
+.cerrar{
+    background-color: tomato;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 10px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.cerrarT{
+    cursor: pointer;
+    font-size: 1.5em;
+    margin-top: 5px;
+    font-weight: bolder;
+    color: black;
+}
+
+.cerrarT:hover{
+    color: tomato;
+    text-shadow: black 2px 2px 2px;
+}
+
+
+
+.form{
+    height: fit-content;
+    width: calc(80% - 10vw);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10vh 5vw;
+    background-color: #0abbe3e7;
+    border-radius: 25px 25px 50px 50px;    
+}
+
+.form input{
+    margin-top: 5px;
+    width: 80%;
+    height: 1.2em;
+    font-size: 1.2em;
+}
+
+.form button{
+    margin-top: 5px;
+    cursor: pointer;
+    padding: 5px 15px;
+    font-size: 1.2em;
+}
+
+.form button:hover{
+    background-color: #2980b9;
+    color: whitesmoke;
+}
+
+.azul{
+    background-color: #2e86de44;
+}
+
+.naranja{
+    background-color: #feca5744;
+}
+
+.verde{
+    background-color: #1dd1a144;
+}

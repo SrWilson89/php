@@ -1,0 +1,118 @@
+
+
+/*jercicio 1*/
+
+/*
+#milistado{
+
+border: 1px solid rgb(226, 47, 47);
+padding: 5px;
+
+
+}
+.fas{
+
+font-size: 24px;
+
+
+} */
+
+/*No poner punto y coma que es CSS*/
+/*
+
+.fas:hover{
+
+transform: rotate(180deg);
+transition: 1s all ease-in;
+
+
+} 
+*/
+
+
+/*jercicio 2*/
+
+*{
+padding: 0px;
+margin: 0px;
+
+
+}
+
+.contenedor{
+
+
+    height: calc(100vh - 100px);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  
+}
+body{
+
+    background-color: rgb(184, 169, 169);
+    
+}
+
+.botones{
+    
+    color: rgb(224, 189, 49);
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    font-size: 32px;
+}
+/*
+.fas:hover{
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    background-color: darkred;
+
+} */
+.dato{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+
+}
+#posicion{
+   display: flex;
+    justify-content: space-around;  
+    align-items: center;
+    height: 20px;
+    width: 600px;
+    border: 1px solid black;
+
+}
+
+.bolaR{
+
+    height: 25px;
+    width: 25px;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: blanchedalmond;
+
+
+
+}
+.bolaT{
+
+    height: 25px;
+    width: 25px;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: rgb(20, 20, 19);
+
+
+
+}
+
+

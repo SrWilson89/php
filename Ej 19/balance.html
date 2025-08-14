@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="ingresos">
+            <div class="top verde"><h2>Ingresos</h2></div>
+            
+            <div id="ingresos">
+                <p>0€</p>
+            </div>
+
+        </div>
+
+        <div class="gastos">
+            <div class="top rojo"><h2>Gastos</h2></div>
+            
+            <div id="gastos">
+                <p>0€</p>
+            </div>
+
+        </div>
+
+        <div class="balance">
+            <div class="top"><h2>Balance</h2></div>
+            
+            <id id="balance">
+                <p>0€</p>
+            </id>
+
+        </div>
+
+        <div class="apuntes">
+
+            <select name="" id="select" class="texto">
+                <option value="1">Ingreso</option>
+                <option value="2">Gasto</option>
+            </select>
+
+            <input type="text" name="" id="descripcion" placeholder="Descripcion" required="" class="texto">
+            <input type="number" name="" id="dinero" placeholder="€" required="" class="texto" min="1">
+
+            <button class="boton" onclick="gasto()">Enviar</button>
+
+        </div>
+
+    </div>
+
+    <div class="abajo">
+        <div class="imprimir">
+            
+            <button class="impr" onclick="window.print()">Imprimir</button>
+            <button class="botoncito" onclick="borartodo()">Borrar Todo</button>
+        </div>
+
+        <div id="izq">
+
+        </div>
+
+        <div id="der">
+            
+        </div>
+    </div>
+
+<script>
+var contabilidad=[];
+
+function gasto(){
+
+    descripcion=document.getElementById('descripcion').value;
+    dinero=parseFloat(document.getElementById('dinero').value);
+    balanceDt=parseInt(document.getElementById('select').value);
+
+    if(descripcion=="" || dinero==""){
+        alert("Introduzca la descripcion y el dinero")
+    }    
+
+    else{
+        contabilidad.push({
+            posicionBal:balanceDt,
+            descripcionBal:descripcion,
+            dineroBal:dinero
+        });
+
+        localStorage.setItem('Mysdatosgestion',JSON.stringify(contabilidad));
+
+        pintar();
+    }
+}
+
+function cargaDatos(){
+    if (localStorage.getItem('Mysdatosgestion')){
+        contabilidad=JSON.parse(localStorage.getItem('Mysdatosgestion'));
+        pintar();
+    }
+}
+
+cargaDatos();
+pintar();
+
+function eliminarTarea(posicion){
+    contabilidad.splice(posicion,1);
+    localStorage.setItem('Mysdatosgestion',JSON.stringify(contabilidad));
+    pintar();
+}
+
+function borartodo(){
+    contabilidad.splice(0,contabilidad.length);
+    localStorage.setItem('Mysdatosgestion',JSON.stringify(contabilidad));
+    cargaDatos();
+}
+
+function pintar(){
+    document.getElementById('izq').innerHTML=`<div class="arriba"><h2>Ingresos</h2></div>`;
+    document.getElementById('der').innerHTML=`<div class="arriba"><h2>Gastos</h2></div>`;
+    contador1=0;
+    contador2=0;
+
+if (contabilidad.length==0){
+
+document.getElementById('gastos').innerHTML=`
+            <div class="caja2 rojo">
+            <p>0 €</span></p>
+            </div>`;
+
+document.getElementById('ingresos').innerHTML=`
+            <div class="caja2 verde">
+            <p>0 €</span></p>
+            </div>`;
+
+document.getElementById('balance').innerHTML=`
+            <div class="caja2 azul">
+            <p>0 €</span></p>
+            </div>`;
+}
+
+    for (let x=0; x<=contabilidad.length ; x++){
+
+        if (contabilidad[x].posicionBal==1){
+            
+            document.getElementById('izq').innerHTML+=`
+            <div class="caja">
+            <p>${contabilidad[x].descripcionBal}<span> / </span></p>
+            <p>${contabilidad[x].dineroBal}<span> €</span></p>
+            <p class="borrar" onclick="eliminarTarea(${x})">Borrar</p>
+            </div>`;
+
+            contador1+=parseFloat(contabilidad[x].dineroBal);
+
+            contador1a=parseFloat(contador1).toFixed(2);
+
+            total=(contador1-contador2);
+
+            totalA=parseFloat(total).toFixed(2);
+
+            document.getElementById('ingresos').innerHTML=`
+            <div class="caja2 verde">
+            <p>${contador1a}<span> €</span></p>
+            </div>`;
+
+        if (total>=0){
+
+            document.getElementById('balance').innerHTML=`
+            <div class="caja2 azul">
+            <p>${totalA}<span> €</span></p>
+            </div>`;
+    
+            }
+            else{
+                document.getElementById('balance').innerHTML=`
+                <div class="caja2 azul texrojo">
+                <p>${totalA}<span> €</span></p>
+                </div>`;
+            }
+        }
+
+        else{
+            
+            document.getElementById('der').innerHTML+=`
+            <div class="caja">
+            <p>${contabilidad[x].descripcionBal}<span> / </span></p>
+            <p>${contabilidad[x].dineroBal}<span> €</span></p>
+            <p class="borrar" onclick="eliminarTarea(${x})">Borrar</p>
+            </div>`;
+
+            
+            contador2+=parseFloat(contabilidad[x].dineroBal);
+
+            contador2a=parseFloat(contador1).toFixed(2);
+
+            total=(contador1-contador2);
+
+            totalA=parseFloat(total).toFixed(2);
+
+            document.getElementById('gastos').innerHTML=`
+            <div class="caja2 rojo">
+            <p>${contador2a}<span> €</span></p>
+            </div>`;
+
+            if (total>=0){
+                document.getElementById('balance').innerHTML=`
+                <div class="caja2 azul">
+                <p>${totalA}<span> €</span></p>
+                </div>`;
+            }
+
+            else{
+                document.getElementById('balance').innerHTML=`
+                <div class="caja2 azul texrojo">
+                <p>${totalA}<span> €</span></p>
+                </div>`;
+            }
+        }
+    }
+}
+console.log(`
+---------------------------------------------------
+    Este codigo fue desarrolado por Sr.Wilson-89   
+    Email: srwilsom89@gmail.com                    
+---------------------------------------------------
+
+╔═══════════════════════╗
+║ ╔═╗  ╔╦╦╦╦╗           ║
+║ ║╚╬═╗║║║╠╣╠══╦═╦═╗ 8  ║
+║ ╠╗║╠╝║║║║║╠╗╚╣║║║║  9 ║
+║ ╚═╩╝ ╚══╩╩╩══╩═╩╩╝    ║
+╚═══════════════════════╝
+
+## ##   ### ##
+##   ##   ##  ##
+####      ##  ##
+ #####    ## ##
+    ###   ## ##
+##   ##   ##  ##
+ ## ##   #### ##
+
+ ##   ##    ####
+ ##   ##     ##
+ ##   ##     ##
+ ## # ##     ##
+ # ### #     ##
+  ## ##      ##
+ ##   ##    ####
+
+ ####      ## ##
+ ##      ##   ##
+ ##      ####
+ ##       #####
+ ##          ###
+ ##  ##  ##   ##
+### ###   ## ##
+
+## ##   ###  ##
+##   ##    ## ##
+##   ##   # ## #
+##   ##   ## ##
+##   ##   ##  ##
+##   ##   ##  ##
+ ## ##   ###  ##
+
+ ## ##    ## ##
+##   ##   #   ##
+##   ##  ##   ##
+ ## ##    ## ###
+##   ##       ##
+ #   ##  ##   ##
+ ## ##    ## ##
+
+`);
+</script>
+
+<style>
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.contenedor{
+    min-height: 30vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #bdc3c7;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.ingresos, .gastos, .balance{
+    margin-left: 15%;
+    width: 70% !important;
+    height: 70% !important;
+    text-align: center;
+
+    margin-bottom: 5px;
+    padding-bottom: 40px !important;
+    height: 200px !important;
+}
+
+.ingresos{
+    background-color: #27ae60;
+    color: white;
+}
+
+.gastos{
+    background-color: #c0392b;
+    color: white;
+}
+
+.balance{
+    background-color: #2980b9;
+    color: white;
+}
+
+#ingresos, #gastos, #balance{
+    width: 100%;
+    text-align: center;
+    font-size: calc(45px + (45 - 20) * ((100vw - 300px) / (1200 - 300))) !important;
+}
+
+.apuntes{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.apuntes select, .apuntes input, .apuntes button{
+    margin-top: 5px;
+    margin-left: 10%;
+    width: 80%;
+    font-size: 1.5em;
+}
+
+.apuntes button{
+    background-color: #fdcb6e;
+    color: black;
+    font-weight: bolder;
+    border-radius: 10px;
+}
+
+.abajo{
+    
+    width: 100%;
+    min-height: 70vh;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    background-color: black;
+}
+
+#izq, #der{
+    
+    margin-left: 5%;
+    width: 100%;
+    min-height: 20vh;
+    width: 90%;
+    padding-bottom: 5px;
+
+}
+
+#der{
+    margin-top: 5px;
+}
+
+#izq{
+    background-color: #27ae60;    
+}
+
+#der{
+    background-color: #c0392b;    
+}
+
+.arriba{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0c246193;
+    color: #130f40 !important;
+    text-shadow: 2px 2px #f5f6fa,-2px -2px #f5f6fa,-2px 2px #f5f6fa,2px -2px #f5f6fa ;
+}
+
+.caja{
+    margin-top: 5px;
+    font-size: 1.20em;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 30px;
+    padding-top: 20px;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;    
+    border: 1px dotted black;
+    background-color: rgba(255, 255, 255, 0.664);
+    position: relative;
+    color:black;
+
+}
+
+.borrar{
+    background-color: brown;
+    font-size: 0.60em!important;
+    cursor: pointer;
+    width: fit-content;
+    color: white;
+    position: absolute;
+    font-weight: bolder;
+    top:2px;
+    right: 5px;
+    padding: 0px 15px;
+    border-radius: 25px;
+}
+
+
+.botoncito{
+    padding: 5px 10px;
+    font-size: 1.2em;
+    background-color: grey;
+    color: white;
+    margin-bottom: 5px;
+    border-radius: 15px;
+}
+
+.imprimir{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.impr{
+    padding: 5px 10px;
+    font-size: 1.2em;
+    background-color: white;
+    color: black;
+    margin-bottom: 5px;
+    border-radius: 15px;
+}
+
+.texrojo{
+    color:#c0392b;
+    text-shadow: #f5f6fa 2px 2px 2px;
+}
+
+
+@media print{
+
+div:nth-of-type(99) {
+  display: none;
+}
+
+
+    .apuntes{
+        display: none;
+    }
+
+    .imprimir{
+        display: none;
+    }
+
+    .site-header, .entry-header, .site-info{
+        display: none;
+    }
+
+    .borrar{
+        display: none;
+    }
+
+    .arriba{
+        color: black;
+    }
+
+    .contenedor{
+        display: table;
+        align-items: center;
+        justify-content: center;
+        padding: 10%;
+    }
+}
+
+.caja2{
+width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+</style>
+    
+</body>
+</html>
